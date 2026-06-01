@@ -1,0 +1,65 @@
+.process {
+  position: relative;
+}
+
+.title {
+  margin-bottom: var(--space-2xl);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.number {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.connector {
+  display: none;
+}
+
+/* Dashed line between steps on desktop */
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: calc(56px + var(--space-md));
+  width: calc(100% - 56px);
+  height: 0;
+  border-top: 2px dashed var(--color-border);
+}
+
+.label {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.desc {
+  font-size: var(--text-base);
+  color: var(--color-muted-foreground);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .steps {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .step:not(:last-child)::after {
+    display: none;
+  }
+}

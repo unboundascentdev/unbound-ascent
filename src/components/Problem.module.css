@@ -1,0 +1,52 @@
+.problem {
+  background: var(--color-muted);
+}
+
+.title {
+  margin-bottom: var(--space-2xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-background);
+  border: var(--border-width) solid var(--color-foreground);
+  font-size: 20px;
+}
+
+.text {
+  font-size: var(--text-lg);
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.closer {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  max-width: 50ch;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

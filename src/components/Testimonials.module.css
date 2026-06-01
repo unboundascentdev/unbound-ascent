@@ -1,0 +1,119 @@
+.testimonials {
+  background: var(--color-tertiary);
+  position: relative;
+}
+
+.title {
+  margin-bottom: var(--space-sm);
+  color: var(--color-foreground);
+}
+
+.sub {
+  color: var(--color-foreground);
+  opacity: 0.7;
+  margin-bottom: var(--space-2xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+/* Speech bubble */
+.bubble {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background: var(--color-card);
+  border: var(--border-width) solid var(--color-foreground);
+  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-lg) 0;
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--color-foreground);
+}
+
+.quote {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Triangle tail */
+.tail {
+  width: 0;
+  height: 0;
+  margin-left: 24px;
+  border-left: 16px solid var(--color-foreground);
+  border-right: 16px solid transparent;
+  border-top: 12px solid var(--color-foreground);
+  border-bottom: 0;
+  position: relative;
+}
+
+.tail::after {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 0;
+  height: 0;
+  border-left: 14px solid var(--color-card);
+  border-right: 14px solid transparent;
+  border-top: 10px solid var(--color-card);
+  border-bottom: 0;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  padding-left: 4px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  border: var(--border-width) solid var(--color-foreground);
+}
+
+.bubble:nth-child(2) .avatar { background: var(--color-secondary); }
+.bubble:nth-child(3) .avatar { background: var(--color-quaternary); }
+.bubble:nth-child(4) .avatar { background: var(--color-accent); }
+
+.name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  margin-bottom: 0;
+}
+
+.role {
+  font-size: var(--text-xs);
+  color: var(--color-foreground);
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
