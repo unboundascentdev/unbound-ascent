@@ -1,4 +1,8 @@
 import { getPostBySlug, getAllPosts } from '@/lib/posts';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import Link from 'next/link';
+import styles from './post.module.css';
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -10,14 +14,21 @@ export default async function BlogPost({ params }) {
   const post = getPostBySlug(slug);
 
   return (
-    <main className="max-w-2xl mx-auto px-6 py-20">
-      <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      <p className="text-gray-500 text-sm mb-12">{post.date}</p>
-      <div className="prose prose-gray max-w-none">
-        {post.content.split('\n').map((paragraph, i) => (
-          paragraph ? <p key={i} className="mb-4 text-gray-700 leading-relaxed">{paragraph}</p> : null
-        ))}
+    <>
+      <Navbar />
+      <div className={styles.wrapper}>
+        <Link href="/blog" className={styles.back}>← Back to blog</Link>
+        <h1 className={styles.title}>{post.title}</h1>
+        <p className={styles.date}>{post.date}</p>
+        <div className={styles.body}>
+          {post.content.split('\n').map((paragraph, i) => (
+            paragraph.trim() ? (
+              <p key={i}>{paragraph}</p>
+            ) : null
+          ))}
+        </div>
       </div>
-    </main>
+      <Footer />
+    </>
   );
 }
