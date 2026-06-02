@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/posts';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import styles from './blog.module.css';
 
 export default function BlogIndex() {
   const posts = getAllPosts();
@@ -9,22 +10,27 @@ export default function BlogIndex() {
   return (
     <>
       <Navbar />
-      <main className="max-w-2xl mx-auto px-6 py-20">
-        <h1 className="text-3xl font-bold mb-12">Blog</h1>
-        <div className="space-y-12">
+      <div className={styles.wrapper}>
+        <div className={styles.header}>
+          <h1 className={styles.title}>Blog</h1>
+          <p className={styles.subtitle}>Thoughts on founder dependency, structural load, and building businesses that don't run entirely through you.</p>
+        </div>
+        <div className={styles.list}>
           {posts.map(post => (
-            <article key={post.slug} className="border-b border-gray-100 pb-12">
+            <article key={post.slug} className={styles.post}>
+              <span className={styles.tag}>Founder Advisory</span>
               <Link href={`/blog/${post.slug}`}>
-                <h2 className="text-xl font-semibold hover:text-purple-600 transition-colors mb-2">
-                  {post.title}
-                </h2>
+                <h2 className={styles.postTitle}>{post.title}</h2>
               </Link>
-              <p className="text-gray-400 text-sm mb-3">{post.date}</p>
-              <p className="text-gray-600 leading-relaxed">{post.excerpt}</p>
+              <p className={styles.date}>{post.date}</p>
+              <p className={styles.excerpt}>{post.excerpt}</p>
+              <Link href={`/blog/${post.slug}`} className={styles.readMore}>
+                Read more →
+              </Link>
             </article>
           ))}
         </div>
-      </main>
+      </div>
       <Footer />
     </>
   );
