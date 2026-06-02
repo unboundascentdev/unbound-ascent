@@ -2,7 +2,11 @@
 
 title: "Founder Role Transformation: Redefining Your Role as a Business Founder"
 
+description: "Many founders are trapped in daily operations, making every decision. Role misalignment limits growth when the business can't scale without you."
+
 date: "2026-01-22"
+
+slug: "founder-role-transformation"
 
 excerpt: "Many founders find themselves trapped in daily operations, making every decision, and managing every detail. This role misalignment causes inefficiencies and limits growth."
 

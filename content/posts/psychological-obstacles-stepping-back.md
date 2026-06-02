@@ -2,7 +2,11 @@
 
 title: "The 5 Psychological Obstacles That Keep Founders From Stepping Back (Even When They Know They Should)"
 
+description: "Psychological patterns can make stepping back feel dangerous—even when founders know they should reduce their role in daily operations."
+
 date: "2026-04-02"
+
+slug: "psychological-obstacles-stepping-back"
 
 excerpt: "The structural work of reducing founder dependency is real. But underneath the structure, there are psychological patterns that make stepping back feel dangerous — even when the founder knows it's the right move."
 

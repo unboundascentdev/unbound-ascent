@@ -2,7 +2,11 @@
 
 title: "Why Unbound Ascent Coaching Works for Founders: Coaching Benefits for Founders"
 
+description: "When the business relies on the founder as the system itself, coaching must diagnose structural dependency—not just motivation."
+
 date: "2026-02-19"
+
+slug: "why-unbound-ascent-coaching-works"
 
 excerpt: "The primary issue is not lack of effort or motivation. It's that the business has learned to rely on the founder as the system itself."
 

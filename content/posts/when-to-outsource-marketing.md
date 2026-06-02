@@ -2,7 +2,11 @@
 
 title: "When Should Founders Outsource Marketing?"
 
+description: "The problem isn't outsourcing marketing—it's outsourcing before the business is structurally ready, without clarity on who you serve."
+
 date: "2026-03-26"
+
+slug: "when-to-outsource-marketing"
 
 excerpt: "It's not the marketing. It's the order of operations. The problem isn't outsourcing — it's outsourcing before the business is structurally ready for it."
 

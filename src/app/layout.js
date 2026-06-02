@@ -22,6 +22,9 @@ export const metadata = {
     siteName: "Unbound Ascent",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({ children }) {

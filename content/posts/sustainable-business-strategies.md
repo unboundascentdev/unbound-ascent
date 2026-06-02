@@ -2,7 +2,11 @@
 
 title: "Building Sustainable Business Strategies for Longevity"
 
+description: "Diagnose where your business locked into founder dependence, then make structural changes for longevity—not more hustle."
+
 date: "2026-01-29"
+
+slug: "sustainable-business-strategies"
 
 excerpt: "The question is not about working harder or being more motivated. It's about diagnosing where the business has structurally locked itself into founder dependence."
 

@@ -2,7 +2,11 @@
 
 title: "Busy Isn't the Problem. Busy Hiding the Real Problem Is."
 
+description: "For founders, a full calendar often means the wrong work—decisions, fires, and ops details that never left your plate—not real progress."
+
 date: "2026-03-19"
+
+slug: "busy-hiding-real-problem"
 
 excerpt: "There's a version of 'I'm slammed' that's just a full calendar. And then there's the version I hear from founders — where slammed means a lot of the wrong work."
 

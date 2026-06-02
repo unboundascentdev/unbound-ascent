@@ -2,7 +2,11 @@
 
 title: "The Thing Affecting Your Business That Nobody Wants to Name"
 
+description: "Sometimes the structural problem has a personal root—stress, avoidance, or worth tied to being needed—that quietly steers every decision."
+
 date: "2026-04-23"
+
+slug: "thing-affecting-business-nobody-names"
 
 excerpt: "Most business challenges have a structural cause. But sometimes the structure isn't the org chart — it's what the founder is carrying personally and hasn't dealt with yet."
 

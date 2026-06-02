@@ -2,7 +2,11 @@
 
 title: "The Beliefs That Keep Founders Stuck Aren't Personal. They're Structural."
 
+description: "Most founders who can't step back don't have a mindset problem. They have a belief that formed because the structure kept proving it true."
+
 date: "2026-04-16"
+
+slug: "beliefs-that-keep-founders-stuck"
 
 excerpt: "Most founders who can't step back don't have a mindset problem. They have a belief that formed because the structure of their business kept proving it true."
 

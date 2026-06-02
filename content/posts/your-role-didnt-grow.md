@@ -2,7 +2,11 @@
 
 title: "Your Business Grew. Your Role Didn't. That's the Problem."
 
+description: "When the business stabilizes but the founder never steps out of the year-one role, that's role lag—the business grew, the role didn't."
+
 date: "2026-03-05"
+
+slug: "your-role-didnt-grow"
 
 excerpt: "The business stabilized. Revenue became consistent. A team came together. And the founder never really stepped out of the role that made sense in year one."
 
