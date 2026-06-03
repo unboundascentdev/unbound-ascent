@@ -1,5 +1,4 @@
 ---
-
 title: "It's Not Burnout. It's a Business That Still Depends on You for Everything."
 
 description: "Most founders call it burnout. Often the exhaustion comes from a business structure that still depends on them for everything."
@@ -8,8 +7,9 @@ date: "2026-04-09"
 
 slug: "not-burnout-structural-dependency"
 
-excerpt: "Most founders have called this burnout. But for most founders, the exhaustion isn't coming from inside them. It's coming from the structure of the business they built."
+image: "/blog/not-burnout-structural-dependency.svg"
 
+excerpt: "Most founders have called this burnout. But for most founders, the exhaustion isn't coming from inside them. It's coming from the structure of the business they built."
 ---
 
 A lot of founders I talk to describe the same thing: they're exhausted, but they can't fully explain why. The business is working. Revenue is consistent. They have a team. On paper, things look fine. But they still feel like they're carrying everything. They still feel mentally on-call even when they're not physically at work. They still wake up thinking about things that should belong to someone else by now.

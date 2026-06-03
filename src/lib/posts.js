@@ -3,6 +3,16 @@ import path from 'path';
 import matter from 'gray-matter';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
+export const SITE_URL = 'https://www.unboundascent.com';
+
+export function getPostImagePath(post) {
+  return post.image || `/blog/${post.slug}.svg`;
+}
+
+export function getAbsoluteUrl(urlPath) {
+  if (urlPath.startsWith('http')) return urlPath;
+  return `${SITE_URL}${urlPath.startsWith('/') ? urlPath : `/${urlPath}`}`;
+}
 
 export function getAllPosts() {
   const fileNames = fs.readdirSync(postsDirectory);

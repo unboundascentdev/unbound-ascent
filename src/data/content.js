@@ -6,6 +6,7 @@ export const nav = {
   brand: "UNBOUND ASCENT",
   links: [
     { label: "Home", href: "/" },
+    { label: "Assessment", href: "/assessment" },
     { label: "Blog", href: "/blog" },
   ],
   cta: { label: "Book A Free Session", href: BOOKING_URL },
@@ -18,6 +19,8 @@ export const hero = {
   body: "If growth was supposed to create more freedom — and it hasn't — that's worth a conversation.",
   ctaNote: "30 minutes. No pitch. You'll leave with clarity on what's actually driving the load and where to start.",
   cta: "Book a Free Clarity Call",
+  assessmentLink: "Not sure where you stand? Take the free assessment — it takes 3 minutes",
+  
 };
 
 // Section 2 — Problem Definition

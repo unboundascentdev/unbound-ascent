@@ -1,10 +1,10 @@
-import { getPostBySlug, getAllPosts } from '@/lib/posts';
+import { getPostBySlug, getAllPosts, getPostImagePath, getAbsoluteUrl, SITE_URL } from '@/lib/posts';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import BlogPostImage from '@/components/BlogPostImage';
 import Link from 'next/link';
 import styles from './post.module.css';
 
-const SITE_URL = 'https://www.unboundascent.com';
 const AUTHOR_NAME = 'Chris Bustos';
 
 function getCanonicalPostUrl(slug) {
@@ -21,6 +21,7 @@ export async function generateMetadata({ params }) {
   const post = getPostBySlug(slug);
   const url = getCanonicalPostUrl(slug);
   const description = post.description;
+  const imageUrl = getAbsoluteUrl(getPostImagePath(post));
 
   return {
     title: post.title,
@@ -31,11 +32,18 @@ export async function generateMetadata({ params }) {
       url,
       type: 'article',
       siteName: 'Unbound Ascent',
+      images: [
+        {
+          url: imageUrl,
+          alt: post.imageAlt || post.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description,
+      images: [imageUrl],
     },
     alternates: {
       canonical: url,
@@ -45,6 +53,7 @@ export async function generateMetadata({ params }) {
 
 function BlogPostingJsonLd({ post }) {
   const url = getCanonicalPostUrl(post.slug);
+  const imageUrl = getAbsoluteUrl(getPostImagePath(post));
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -56,6 +65,7 @@ function BlogPostingJsonLd({ post }) {
       name: AUTHOR_NAME,
     },
     url,
+    image: imageUrl,
   };
 
   return (
@@ -78,6 +88,7 @@ export default async function BlogPost({ params }) {
         <Link href="/blog" className={styles.back}>← Back to blog</Link>
         <h1 className={styles.title}>{post.title}</h1>
         <p className={styles.date}>{post.date}</p>
+        <BlogPostImage post={post} className={styles.heroImage} priority />
         <div className={styles.body}>
           {post.content.split('\n').map((paragraph, i) => (
             paragraph.trim() ? (

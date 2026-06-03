@@ -448,4 +448,7 @@ body::before {
     justify-content: center;
     min-height: 48px;
   }
+  .cta-group-btn {
+    width: auto !important;
+  }
 }

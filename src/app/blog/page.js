@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/posts';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import BlogPostImage from '@/components/BlogPostImage';
 import styles from './blog.module.css';
 
 export default function BlogIndex() {
@@ -18,6 +19,9 @@ export default function BlogIndex() {
         <div className={styles.list}>
           {posts.map(post => (
             <article key={post.slug} className={styles.post}>
+              <Link href={`/blog/${post.slug}`} className={styles.imageLink}>
+                <BlogPostImage post={post} className={styles.thumbnail} />
+              </Link>
               <span className={styles.tag}>Founder Advisory</span>
               <Link href={`/blog/${post.slug}`}>
                 <h2 className={styles.postTitle}>{post.title}</h2>

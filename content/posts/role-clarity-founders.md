@@ -1,5 +1,4 @@
 ---
-
 title: "Strategies for Role Clarity for Founders: Redefining Your Role as a Founder"
 
 description: "When every decision defaults to the founder, the business is structurally dependent. Role misalignment is structural—not a motivation problem."
@@ -8,8 +7,9 @@ date: "2026-02-12"
 
 slug: "role-clarity-founders"
 
-excerpt: "Role misalignment is not about motivation or effort. It's a structural problem where the business has learned to rely on you more than it should."
+image: "/blog/role-clarity-founders.svg"
 
+excerpt: "Role misalignment is not about motivation or effort. It's a structural problem where the business has learned to rely on you more than it should."
 ---
 
 Founders of service-based businesses often reach a point where their involvement in daily operations becomes a bottleneck. The business depends heavily on their decisions, quality control, and momentum. This dependency creates a structural problem: the founder is no longer just leading the business but has become the system itself.

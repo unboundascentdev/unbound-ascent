@@ -1,5 +1,4 @@
 ---
-
 title: "The Trap Professionals Walk Into When They Start Their Own Business"
 
 description: "Professionals who start a practice often build businesses dependent on them from day one—and don't see it until it's already embedded."
@@ -8,8 +7,9 @@ date: "2026-04-30"
 
 slug: "trap-professionals-walk-into"
 
-excerpt: "Most professionals who go out on their own don't fail because they lack expertise. They fail because the business they build is structurally dependent on them from day one — and they don't see it until it's already embedded."
+image: "/blog/trap-professionals-walk-into.svg"
 
+excerpt: "Most professionals who go out on their own don't fail because they lack expertise. They fail because the business they build is structurally dependent on them from day one — and they don't see it until it's already embedded."
 ---
 
 There's a pattern I see consistently with professionals who leave established firms to start their own practice.

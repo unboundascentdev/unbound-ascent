@@ -32,6 +32,19 @@
   max-width: 55ch;
 }
 
+.assessmentLink {
+  display: inline-block;
+  margin-top: var(--space-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.assessmentLink:hover {
+  text-decoration: underline;
+}
+
 .note {
   margin-top: var(--space-md);
   font-size: var(--text-sm);
@@ -148,4 +161,90 @@
     height: 32px;
     left: -10px;
   }
+}
+
+.ctaGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.ctaGroup a {
+  width: auto !important;
+}
+
+@media (max-width: 768px) {
+  .ctaGroup {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+  }
+  .ctaGroup a {
+    width: auto !important;
+    flex: 0 1 auto !important;
+  }
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--color-foreground);
+  border: 2px solid var(--color-foreground);
+  box-shadow: none;
+}
+
+.btnOutline:hover {
+  background: var(--color-foreground);
+  color: white;
+}
+
+.assessmentBtn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-foreground);
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  background: transparent;
+  color: var(--color-foreground);
+  width: auto !important;
+  box-sizing: border-box;
+}
+
+.assessmentBtn:hover {
+  background: var(--color-foreground);
+  color: white;
+}
+
+.bookingBtn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-foreground);
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  background: var(--color-accent);
+  color: white;
+  width: auto !important;
+  box-shadow: var(--shadow-md);
+  box-sizing: border-box;
+}
+
+.bookingBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--color-foreground);
 }

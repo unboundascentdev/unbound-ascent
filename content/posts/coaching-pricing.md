@@ -1,5 +1,4 @@
 ---
-
 title: "Understanding Coaching Pricing for Entrepreneurs: Business Growth Coaching Costs"
 
 description: "Business growth coaching costs reflect structural challenges and role misalignments that keep founders tethered to daily operations."
@@ -8,8 +7,9 @@ date: "2026-02-05"
 
 slug: "coaching-pricing"
 
-excerpt: "Business growth coaching costs are often a blind spot for founders who have built stable businesses but find themselves trapped in daily operations."
+image: "/blog/coaching-pricing.svg"
 
+excerpt: "Business growth coaching costs are often a blind spot for founders who have built stable businesses but find themselves trapped in daily operations."
 ---
 
 Business growth coaching costs are often a blind spot for founders who have built stable service-based businesses but find themselves trapped in daily operations. The pricing of coaching services reflects more than just time spent — it reveals the structural challenges and role misalignments that keep founders tethered to their businesses.

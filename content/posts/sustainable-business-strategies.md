@@ -1,5 +1,4 @@
 ---
-
 title: "Building Sustainable Business Strategies for Longevity"
 
 description: "Diagnose where your business locked into founder dependence, then make structural changes for longevity—not more hustle."
@@ -8,8 +7,9 @@ date: "2026-01-29"
 
 slug: "sustainable-business-strategies"
 
-excerpt: "The question is not about working harder or being more motivated. It's about diagnosing where the business has structurally locked itself into founder dependence."
+image: "/blog/sustainable-business-strategies.svg"
 
+excerpt: "The question is not about working harder or being more motivated. It's about diagnosing where the business has structurally locked itself into founder dependence."
 ---
 
 Running a service-based business that has reached a stable or growing phase often reveals a hidden challenge: the business depends too heavily on the founder. The founder becomes the system, the bottleneck, and the default decision-maker. This reliance creates a fragile structure that limits growth and threatens longevity.

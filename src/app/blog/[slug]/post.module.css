@@ -29,6 +29,17 @@
   .date {
     font-size: 13px;
     color: #aaa;
+    margin-bottom: 32px;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1200 / 630;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    border: var(--border-width) solid var(--color-foreground);
+    box-shadow: var(--shadow-md);
     margin-bottom: 48px;
   }
   

@@ -1,5 +1,4 @@
 ---
-
 title: "Founder Role Transformation: Redefining Your Role as a Business Founder"
 
 description: "Many founders are trapped in daily operations, making every decision. Role misalignment limits growth when the business can't scale without you."
@@ -8,8 +7,9 @@ date: "2026-01-22"
 
 slug: "founder-role-transformation"
 
-excerpt: "Many founders find themselves trapped in daily operations, making every decision, and managing every detail. This role misalignment causes inefficiencies and limits growth."
+image: "/blog/founder-role-transformation.svg"
 
+excerpt: "Many founders find themselves trapped in daily operations, making every decision, and managing every detail. This role misalignment causes inefficiencies and limits growth."
 ---
 
 When a service-based business reaches a certain level of stability or growth, the founder often becomes the linchpin holding everything together. The business depends on their decisions, quality control, and momentum. This dependence creates a structural problem: the founder is no longer just leading the business but has become the system itself.

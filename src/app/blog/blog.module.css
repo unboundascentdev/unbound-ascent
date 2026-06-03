@@ -40,6 +40,28 @@
   padding-left: 8px;
 }
 
+.imageLink {
+  display: block;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.imageLink:hover .thumbnail {
+  box-shadow: var(--shadow-md);
+  transform: translate(-2px, -2px);
+}
+
 .tag {
   display: inline-block;
   font-size: 11px;

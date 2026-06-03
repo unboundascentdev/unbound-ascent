@@ -1,5 +1,4 @@
 ---
-
 title: "Your Business Learned to Depend on You. Here's How That Happened — and How to Change It."
 
 description: "Founder dependency builds incrementally as early routing patterns never get redesigned when the business and team grow."
@@ -8,8 +7,9 @@ date: "2026-02-26"
 
 slug: "how-founder-dependency-happens"
 
-excerpt: "Nobody designs a business to depend on the founder. It happens incrementally — and unless someone deliberately changes the patterns, they stay in place."
+image: "/blog/how-founder-dependency-happens.svg"
 
+excerpt: "Nobody designs a business to depend on the founder. It happens incrementally — and unless someone deliberately changes the patterns, they stay in place."
 ---
 
 Nobody designs a business to depend on the founder. It happens incrementally. In the early days, the founder is the fastest decision-maker, the most reliable quality check, the one who knows every client relationship well enough to handle the unexpected. Routing things through them makes sense. The business is small enough that it works.

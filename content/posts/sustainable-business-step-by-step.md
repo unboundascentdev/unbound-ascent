@@ -1,5 +1,4 @@
 ---
-
 title: "Building Sustainable Business Strategies: A Step-by-Step Guide"
 
 description: "Most founders try to fix being the bottleneck by delegating harder—but the first fix they try often doesn't work."
@@ -8,8 +7,9 @@ date: "2026-03-12"
 
 slug: "sustainable-business-step-by-step"
 
-excerpt: "Most founders who recognize they're the bottleneck try to fix it. The harder part is that the thing most founders try first doesn't work."
+image: "/blog/sustainable-business-step-by-step.svg"
 
+excerpt: "Most founders who recognize they're the bottleneck try to fix it. The harder part is that the thing most founders try first doesn't work."
 ---
 
 Most founders who recognize they're the bottleneck in their own business try to fix it. That's actually the easy part — once you can see the pattern clearly, the instinct to do something about it is strong.

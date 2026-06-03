@@ -1,5 +1,4 @@
 ---
-
 title: "The Business Doesn't Need More of You. It Needs Less of You in the Wrong Places."
 
 description: "When revenue is consistent but the business feels heavier, it's often a structural problem—not delegation, systems, or willpower alone."
@@ -8,8 +7,9 @@ date: "2026-01-15"
 
 slug: "founder-dependency"
 
-excerpt: "There's a pattern I see so consistently that I've started to think of it as a predictable stage of business growth rather than a personal failing."
+image: "/blog/founder-dependency.svg"
 
+excerpt: "There's a pattern I see so consistently that I've started to think of it as a predictable stage of business growth rather than a personal failing."
 ---
 
 There's a pattern I see so consistently that I've started to think of it as a predictable stage of business growth rather than a personal failing.
