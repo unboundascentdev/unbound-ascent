@@ -165,7 +165,7 @@
 
 .ctaGroup {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 12px;
   align-items: center;
   margin-bottom: var(--space-md);
