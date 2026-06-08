@@ -11,7 +11,7 @@ export default function Hero() {
             <span className={styles.subline}>{hero.subline}</span>
           </h1>
           <p className={styles.body}>{hero.body}</p>
-          <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap", gap: "12px", alignItems: "center", marginBottom: "1rem"}}>
+          <div className={styles.ctaGroup}>
             <a href={BOOKING_URL} className={styles.bookingBtn} target="_blank" rel="noopener noreferrer">{hero.cta} →</a>
             <a href="/assessment" className={styles.assessmentBtn}>Take the Free Assessment</a>
           </div>
