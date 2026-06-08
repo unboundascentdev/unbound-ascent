@@ -1,6 +1,15 @@
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 
+function AnalyticsWrapper() {
+  if (typeof window !== "undefined") {
+    try {
+      if (localStorage.getItem("va-disable") === "1") return null;
+    } catch (e) {}
+  }
+  return <Analytics />;
+}
+
 export const metadata = {
   title: "Unbound Ascent — Break the Ownership Bottleneck",
   description:
@@ -18,7 +27,7 @@ export const metadata = {
   openGraph: {
     title: "Unbound Ascent — Break the Ownership Bottleneck",
     description:
-      "Helping founders reduce the invisible load created when the business still depends too heavily on them.",
+      "Helping founders reduce the invisible load created when the business still dep too heavily on them.",
     url: "https://www.unboundascent.com",
     siteName: "Unbound Ascent",
     type: "website",
@@ -27,13 +36,12 @@ export const metadata = {
     card: "summary_large_image",
   },
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
         {children}
-        <Analytics />
+        <AnalyticsWrapper />
       </body>
     </html>
   );
