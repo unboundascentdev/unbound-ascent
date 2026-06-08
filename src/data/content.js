@@ -9,7 +9,7 @@ export const nav = {
     { label: "Assessment", href: "/assessment" },
     { label: "Blog", href: "/blog" },
   ],
-  cta: { label: "Book A Free Session", href: BOOKING_URL },
+  cta: { label: "Book a Free Clarity Call", href: BOOKING_URL },
 };
 
 // Section 1 — Opener
@@ -98,8 +98,8 @@ export const process = {
 export const about = {
   title: "About Chris",
   body: "I work with service-based business owners who are building real things and want to stop paying for it with everything else that matters.",
-  background: "I've spent years inside growing businesses — not just advising them — watching capable founders slowly become the system everything runs through. My work is about helping the business hold its own weight.",
-  cta: "Book a Free Call with Me",
+  background: "I've spent years inside growing businesses — not just advising them. I watched capable founders build real revenue, hire real teams, and still end up as the thing everything routes through. Every decision, every escalation, every moment something felt uncertain — it came back to them. That pattern has a structural cause. And that's what I work on.",
+  cta: "Book a Free Clarity Call",
 };
 
 // Footer
