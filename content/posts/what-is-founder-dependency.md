@@ -4,6 +4,9 @@ date: "2026-06-11"
 description: "Founder dependency is when your business runs and stays stable, but only because of your continuous involvement. Here's what it is, how it develops, and what it actually takes to change it."
 category: "Founder Advisory"
 author: "Chris Bustos"
+slug: "what-is-founder-dependency"
+image: "/blog/what-is-founder-dependency.png"
+excerpt: "Founder dependency is when your business runs and stays stable, but only because of your continuous involvement. Here's what it is, how it develops, and what it takes to change it."
 ---
 
 Your business is running. Revenue is stable. You have a team.

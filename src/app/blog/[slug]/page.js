@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogPostImage from '@/components/BlogPostImage';
 import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
 import styles from './post.module.css';
 
 const AUTHOR_NAME = 'Chris Bustos';
@@ -22,7 +23,6 @@ export async function generateMetadata({ params }) {
   const url = getCanonicalPostUrl(slug);
   const description = post.description;
   const imageUrl = getAbsoluteUrl(getPostImagePath(post));
-
   return {
     title: post.title,
     description,
@@ -32,12 +32,7 @@ export async function generateMetadata({ params }) {
       url,
       type: 'article',
       siteName: 'Unbound Ascent',
-      images: [
-        {
-          url: imageUrl,
-          alt: post.imageAlt || post.title,
-        },
-      ],
+      images: [{ url: imageUrl, alt: post.imageAlt || post.title }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -45,9 +40,7 @@ export async function generateMetadata({ params }) {
       description,
       images: [imageUrl],
     },
-    alternates: {
-      canonical: url,
-    },
+    alternates: { canonical: url },
   };
 }
 
@@ -60,14 +53,10 @@ function BlogPostingJsonLd({ post }) {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: {
-      '@type': 'Person',
-      name: AUTHOR_NAME,
-    },
+    author: { '@type': 'Person', name: AUTHOR_NAME },
     url,
     image: imageUrl,
   };
-
   return (
     <script
       type="application/ld+json"
@@ -76,10 +65,21 @@ function BlogPostingJsonLd({ post }) {
   );
 }
 
+const markdownComponents = {
+  h2: ({children}) => <h2 className={styles.h2}>{children}</h2>,
+  h3: ({children}) => <h3 className={styles.h3}>{children}</h3>,
+  p: ({children}) => <p className={styles.p}>{children}</p>,
+  strong: ({children}) => <strong className={styles.strong}>{children}</strong>,
+  a: ({href, children}) => (
+    <a href={href} className={styles.ctaButton} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  ),
+};
+
 export default async function BlogPost({ params }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-
   return (
     <>
       <BlogPostingJsonLd post={post} />
@@ -88,13 +88,9 @@ export default async function BlogPost({ params }) {
         <Link href="/blog" className={styles.back}>← Back to blog</Link>
         <h1 className={styles.title}>{post.title}</h1>
         <p className={styles.date}>{post.date}</p>
-        <BlogPostImage post={post} className={styles.heroImage} priority />
+      <BlogPostImage post={post} className={styles.heroImage} priority />
         <div className={styles.body}>
-          {post.content.split('\n').map((paragraph, i) => (
-            paragraph.trim() ? (
-              <p key={i}>{paragraph}</p>
-            ) : null
-          ))}
+          <ReactMarkdown components={markdownComponents}>{post.content}</ReactMarkdown>
         </div>
       </div>
       <Footer />
