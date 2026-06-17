@@ -39,10 +39,12 @@
 }
 
 .closer {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: var(--text-xl);
-  max-width: 50ch;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-lg);
+  max-width: 55ch;
+  color: var(--color-text);
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 768px) {

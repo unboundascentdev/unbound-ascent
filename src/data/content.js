@@ -34,7 +34,7 @@ export const problem = {
     "Revenue is real. So is the weight of knowing the whole thing still runs through you.",
     "You keep waiting for it to get lighter. It doesn't, because the role you're playing inside the business hasn't changed yet.",
   ],
-  closer: "This isn't a motivation problem. It isn't a systems problem either. It's a role problem. You're still operating like the person who had to do everything to get here. That version of you built something real. It's also the thing now keeping you in the center of it.",
+  closer: "This isn't a motivation problem. It isn't a systems problem either. It's a role problem. You're still operating like the person who had to do everything to get here. That's what needs to change.",
 };
 
 // Section 3 — Who It's For
