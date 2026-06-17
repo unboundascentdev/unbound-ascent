@@ -10,10 +10,10 @@ export default function Hero() {
             <br />
             <span className={styles.subline}>{hero.subline}</span>
           </h1>
-          <p className={styles.body}>{hero.body}</p>
+          <p className={styles.body}>{hero.bodyP1}</p><p className={styles.body}>{hero.bodyP2}</p>
           <div className={styles.ctaGroup}>
             <a href={BOOKING_URL} className={styles.bookingBtn} target="_blank" rel="noopener noreferrer">{hero.cta} →</a>
-            <a href="/assessment" className={styles.assessmentBtn}>Take the Free Assessment</a>
+            <div><a href="/assessment" className={styles.assessmentBtn}>{hero.assessmentCta} →</a><p className={styles.assessmentNote}>{hero.assessmentLink}</p></div>
           </div>
           <p className={styles.note}>{hero.ctaNote}</p>
         </div>

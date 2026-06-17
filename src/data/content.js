@@ -14,12 +14,14 @@ export const nav = {
 
 // Section 1 — Opener
 export const hero = {
-  headline: "Your business is working.",
-  subline: "You're still carrying all of it.",
-  body: "If growth was supposed to create more freedom — and it hasn't — that's worth a conversation.",
-  ctaNote: "30 minutes. No pitch. You'll leave with clarity on what's actually driving the load and where to start.",
-  cta: "Book a Free Clarity Call",
-  assessmentLink: "Not sure where you stand? Take the free assessment — it takes 3 minutes",
+  headline: "Your business grew.",
+  subline: "Your role never changed.",
+  bodyP1: "If every decision, client issue, and follow-up still finds its way back to you, growth didn't buy you freedom. It bought you more to carry.",
+  bodyP2: "This isn't a discipline problem, and it isn't really an operations problem either. You're still running the business the way you had to when you were the one doing everything. That's the part that hasn't caught up.",
+  ctaNote: "30 minutes. No pitch. You'll leave knowing the 1-3 things still tethering you to the business.",
+  cta: "Book Your Founder Load Audit",
+  assessmentCta: "Find out how dependent your business really is on you",
+  assessmentLink: "10 questions. 2 minutes. See exactly where you stand.",
   
 };
 
@@ -32,7 +34,7 @@ export const problem = {
     "Revenue is real. So is the exhaustion.",
     "You keep waiting for things to slow down. They don't.",
   ],
-  closer: "This isn't a motivation problem. It's a structural one. And it's fixable.",
+  closer: "This isn't a motivation problem. It's a role, boundary, and decision-structure problem. And once you can see it, you can change it.",
 };
 
 // Section 3 — Who It's For
@@ -99,7 +101,7 @@ export const about = {
   title: "About Chris",
   body: "I work with service-based business owners who are building real things and want to stop paying for it with everything else that matters.",
   background: "I've spent years inside growing businesses — not just advising them. I watched capable founders build real revenue, hire real teams, and still end up as the thing everything routes through. Every decision, every escalation, every moment something felt uncertain — it came back to them. That pattern has a structural cause. And that's what I work on.",
-  cta: "Book a Free Clarity Call",
+  cta: "Book Your Founder Load Audit",
 };
 
 // Footer
