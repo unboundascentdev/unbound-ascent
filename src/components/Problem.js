@@ -1,7 +1,7 @@
 import { problem } from "@/data/content";
 import styles from "./Problem.module.css";
 
-const icons = ["🎯", "🧠", "⚡", "⏳"];
+const icons = ["", "", "", ""];
 const shadows = ["card-accent", "card-secondary", "card-tertiary", "card-quaternary"];
 
 export default function Problem() {
@@ -12,7 +12,6 @@ export default function Problem() {
         <div className={styles.grid}>
           {problem.points.map((point, i) => (
             <div key={i} className={`card ${shadows[i]} ${styles.card}`}>
-              <div className={styles.icon}>{icons[i]}</div>
               <p className={styles.text}>{point}</p>
             </div>
           ))}

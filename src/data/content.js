@@ -29,12 +29,12 @@ export const hero = {
 export const problem = {
   title: "What this actually looks like",
   points: [
-    "You have a team, but the important decisions still come back to you.",
-    "You leave work physically but never fully mentally.",
-    "Revenue is real. So is the exhaustion.",
-    "You keep waiting for things to slow down. They don't.",
+    "You have a team, but the important decisions still find their way back to you.",
+    "You leave work physically. You never fully leave it mentally.",
+    "Revenue is real. So is the weight of knowing the whole thing still runs through you.",
+    "You keep waiting for it to get lighter. It doesn't, because the role you're playing inside the business hasn't changed yet.",
   ],
-  closer: "This isn't a motivation problem. It's a role, boundary, and decision-structure problem. And once you can see it, you can change it.",
+  closer: "This isn't a motivation problem. It isn't a systems problem either. It's a role problem. You're still operating like the person who had to do everything to get here. That version of you built something real. It's also the thing now keeping you in the center of it.",
 };
 
 // Section 3 — Who It's For
