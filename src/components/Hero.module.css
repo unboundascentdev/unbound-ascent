@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: calc(72px + var(--space-section));
+  padding-top: 96px;
   overflow: hidden;
 }
 
@@ -48,7 +48,7 @@
 .note {
   margin-top: var(--space-md);
   font-size: var(--text-sm);
-  color: var(--color-foreground);
+  color: var(--color-muted-foreground);
   font-weight: 600;
   max-width: 50ch;
 }
@@ -166,9 +166,10 @@
 
 .ctaGroup {
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
-  gap: 12px;
-  align-items: center;
+  gap: 24px;
+  align-items: flex-start;
   margin-bottom: var(--space-md);
 }
 
@@ -178,6 +179,7 @@
 
 @media (max-width: 768px) {
   .ctaGroup {
+  align-items: flex-start !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
   }
@@ -189,7 +191,7 @@
 
 .btnOutline {
   background: transparent;
-  color: var(--color-foreground);
+  color: var(--color-muted-foreground);
   border: 2px solid var(--color-foreground);
   box-shadow: none;
 }
@@ -212,9 +214,9 @@
   cursor: pointer;
   text-decoration: none;
   line-height: 1;
-  white-space: nowrap;
+  
   background: transparent;
-  color: var(--color-foreground);
+  color: var(--color-muted-foreground);
   width: auto !important;
   box-sizing: border-box;
 }
@@ -237,7 +239,7 @@
   cursor: pointer;
   text-decoration: none;
   line-height: 1;
-  white-space: nowrap;
+  
   background: var(--color-accent);
   color: white;
   width: auto !important;
@@ -248,4 +250,17 @@
 .bookingBtn:hover {
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0px 0px var(--color-foreground);
+}
+
+.ctaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  max-width: 300px;
+}
+.assessmentNote {
+  font-size: var(--text-sm);
+  color: var(--color-muted-foreground);
+  margin: 0;
 }

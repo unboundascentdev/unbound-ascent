@@ -20,8 +20,8 @@ export const hero = {
   bodyP2: "This isn't a discipline problem, and it isn't really an operations problem either. You're still running the business the way you had to when you were the one doing everything. That's the part that hasn't caught up.",
   ctaNote: "30 minutes. No pitch. You'll leave knowing the 1-3 things still tethering you to the business.",
   cta: "Book Your Founder Load Audit",
-  assessmentCta: "Find out how dependent your business really is on you",
-  assessmentLink: "10 questions. 2 minutes. See exactly where you stand.",
+  assessmentCta: "See How Much Still Routes Through You",
+  assessmentLink: "10 questions. 2 minutes. Find out how much your business still depends on you.",
   
 };
 
