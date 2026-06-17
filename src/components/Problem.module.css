@@ -41,7 +41,7 @@
 .closer {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: var(--text-lg);
+  font-size: var(--text-md);
   max-width: 55ch;
   color: var(--color-text);
   margin-top: 0.5rem;

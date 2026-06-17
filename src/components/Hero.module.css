@@ -18,6 +18,7 @@
 }
 
 .headline {
+  font-size: var(--text-3xl);
   margin-bottom: var(--space-lg);
 }
 
@@ -169,7 +170,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 24px;
-  align-items: flex-start;
+  align-items: flex-end;
   margin-bottom: var(--space-md);
 }
 
@@ -194,6 +195,7 @@
   color: var(--color-muted-foreground);
   border: 2px solid var(--color-foreground);
   box-shadow: none;
+  min-height: 56px;
 }
 
 .btnOutline:hover {
@@ -214,6 +216,8 @@
   cursor: pointer;
   text-decoration: none;
   line-height: 1;
+  white-space: nowrap;
+  min-height: 56px;
   
   background: transparent;
   color: var(--color-muted-foreground);
@@ -257,7 +261,8 @@
   flex-direction: column;
   gap: 8px;
   flex: 1;
-  max-width: 300px;
+  max-width: 360px;
+  align-items: flex-start;
 }
 .assessmentNote {
   font-size: var(--text-sm);
