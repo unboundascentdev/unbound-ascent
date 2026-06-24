@@ -16,7 +16,7 @@ export default function OptInBanner() {
     }}>
       <span>Your brain never fully leaves the business. </span>
       <Link
-        href="/free"
+        href="/assessment"
         style={{
           color: "#c9a84c",
           fontWeight: "bold",
@@ -24,7 +24,7 @@ export default function OptInBanner() {
           marginLeft: "8px",
         }}
       >
-        Get the free checklist
+        Find out why.
       </Link>
     </div>
   );

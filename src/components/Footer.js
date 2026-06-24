@@ -72,6 +72,12 @@ export default function Footer() {
           <a href={`mailto:${footer.email}`} className={styles.link}>{footer.email}</a>
           <a href={`tel:+18329534901`} className={styles.link}>{footer.phone}</a>
         </div>
+
+        <div className={styles.col}>
+          <h4 className={styles.colTitle}>Stay in the Loop</h4>
+          <p style={{ fontSize: "0.85rem", marginBottom: "12px", color: "var(--color-muted-foreground)" }}>Biweekly insights for founders trying to scale without carrying it all.</p>
+          <a href="/free" style={{ display: "inline-block", width: "fit-content", backgroundColor: "var(--color-accent)", color: "white", padding: "10px 20px", borderRadius: "999px", fontWeight: "700", fontSize: "0.85rem", textDecoration: "none", whiteSpace: "nowrap" }}>Join Our Newsletter</a>
+        </div>
       </div>
 
       <div className={`container ${styles.bottom}`}>
