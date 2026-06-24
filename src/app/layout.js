@@ -1,4 +1,5 @@
 import "./globals.css";
+import OptInBanner from "../components/OptInBanner";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 
@@ -28,10 +29,12 @@ export const metadata = {
     card: "summary_l_image",
   },
 };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <OptInBanner />
         {children}
         <Script id="analytics-guard" strategy="beforeInteractive">{`
           if (localStorage.getItem('va-disable') !== '1') {
@@ -43,3 +46,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
