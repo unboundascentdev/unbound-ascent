@@ -7,7 +7,7 @@ export default function OptInBanner() {
       top: 0,
       left: 0,
       right: 0,
-      zIndex: 101,
+      zIndex: 250,
       backgroundColor: "#1a1a1a",
       color: "#ffffff",
       textAlign: "center",

@@ -129,14 +129,6 @@ export default function Assessment() {
   return (
     <>
       <Navbar />
-      <div className={styles.stickyProgress}>
-        <div className={styles.progressInner}>
-          <div className={styles.progress}>
-            <div className={styles.progressBar} style={{ width: `${(answered / questions.length) * 100}%` }} />
-          </div>
-          <p className={styles.progressText}>{answered} of {questions.length} answered</p>
-        </div>
-      </div>
       <div className={styles.wrapper}>
         <div className={styles.header}>
           <h1 className={styles.title}>Founder Dependency Assessment</h1>

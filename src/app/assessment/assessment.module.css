@@ -1,7 +1,7 @@
 .wrapper {
   max-width: 680px;
   margin: 0 auto;
-  padding: 120px 24px 80px;
+  padding: 130px 24px 80px;
   z-index: 1;
 }
 
@@ -26,10 +26,11 @@
 }
 
 .stickyProgress {
-  position: sticky;
-  top: 72px;
+  position: static;
+  left: 0;
+  right: 0;
   background: var(--color-background);
-  z-index: 100;
+  z-index: 10;
   border-bottom: 1px solid #e2e8f0;
   padding: 10px 24px;
 }

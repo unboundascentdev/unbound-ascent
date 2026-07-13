@@ -3,7 +3,8 @@
   top: 44px;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 300;
+  isolation: isolate;
   background: rgba(255, 253, 245, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: var(--border-width) solid var(--color-border);
