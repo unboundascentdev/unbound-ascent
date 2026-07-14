@@ -21,7 +21,7 @@ export default function Cta() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Book Your Free Clarity Call
+              Book Your Founder Load Audit
               <span className={styles.arrow}>→</span>
             </a>
           </div>

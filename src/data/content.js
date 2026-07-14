@@ -1,4 +1,4 @@
-export const BOOKING_URL = "https://calendar.app.google/MPEhPGsrJV9ppS9M7";
+export const BOOKING_URL = "/book";
 export const EMAIL = "chris@unboundascent.com";
 export const PHONE = "(832) 953-4901";
 

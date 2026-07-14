@@ -113,7 +113,7 @@ export default function Assessment() {
             </div>
             <p className={styles.ctaText}>{result.cta}</p>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={styles.ctaBtn}>
-              Book a Free Clarity Call →
+              Book Your Founder Load Audit →
             </a>
             <p className={styles.ctaNote}>30 minutes. No pitch. Just clarity on what to fix first.</p>
             <button type="button" className={styles.retake} onClick={() => { setAnswers({}); setSubmitted(false); }}>
