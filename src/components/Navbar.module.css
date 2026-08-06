@@ -81,19 +81,28 @@
 
   .links {
     position: fixed;
-    top: 72px;
+    /* Sits below the fixed announcement banner (44px) + navbar (72px) */
+    top: 116px;
     left: 0;
     right: 0;
+    max-height: calc(100vh - 116px);
+    overflow-y: auto;
     flex-direction: column;
     background: var(--color-background);
     border-bottom: var(--border-width) solid var(--color-border);
     padding: var(--space-xl);
     gap: var(--space-lg);
-    transform: translateY(-120%);
-    transition: transform var(--transition-base);
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform var(--transition-base), opacity var(--transition-base), visibility var(--transition-base);
   }
 
   .open {
     transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 }

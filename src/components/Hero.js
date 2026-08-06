@@ -12,11 +12,20 @@ export default function Hero() {
           </h1>
           <p className={styles.body}>{hero.bodyP1}</p>
           <p className={styles.body}>{hero.bodyP2}</p>
-          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gridTemplateRows:"auto auto",gap:"8px 24px",marginBottom:"var(--space-md)"}}>
-            <a href={BOOKING_URL} className={styles.bookingBtn} target="_blank" rel="noopener noreferrer">{hero.cta} &rarr;</a>
-            <a href="/assessment" className={styles.assessmentBtn}>{hero.assessmentCta} →</a>
-            <p style={{fontSize:"0.875rem",color:"#555",margin:0}}>{hero.ctaNote}</p>
-            <p style={{fontSize:"0.875rem",color:"#555",margin:0}}>{hero.assessmentLink}</p>
+          <div className={styles.ctaWrap}>
+            <a
+              href={BOOKING_URL}
+              className={`${styles.bookingBtn} ${styles.ctaBook}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {hero.cta} &rarr;
+            </a>
+            <a href="/assessment" className={`${styles.assessmentBtn} ${styles.ctaAssessment}`}>
+              {hero.assessmentCta} →
+            </a>
+            <p className={styles.ctaBookNote}>{hero.ctaNote}</p>
+            <p className={styles.ctaAssessmentNote}>{hero.assessmentLink}</p>
           </div>
         </div>
         <div className={styles.imageWrap}>

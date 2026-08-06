@@ -11,7 +11,10 @@ export default function Navbar() {
       <div className={`container ${styles.inner}`}>
         <a href="/" className={styles.brand}>{nav.brand}</a>
 
-        <div className={`${styles.links} ${open ? styles.open : ""}`}>
+        <div
+          id="mobile-nav-menu"
+          className={`${styles.links} ${open ? styles.open : ""}`}
+        >
           {nav.links.map((l) => (
             <a key={l.label} href={l.href} className={styles.link}>
               {l.label}
@@ -27,6 +30,8 @@ export default function Navbar() {
           className={styles.burger}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-nav-menu"
         >
           <span className={`${styles.bar} ${open ? styles.barOpen : ""}`} />
           <span className={`${styles.bar} ${open ? styles.barOpen : ""}`} />

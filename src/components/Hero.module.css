@@ -256,6 +256,61 @@
   box-shadow: 6px 6px 0px 0px var(--color-foreground);
 }
 
+/* --- Hero CTA layout ---
+   Desktop: two columns, each note sits beneath its own button.
+   Mobile: single column, stacked in source order (book, then assessment). */
+.ctaWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "bookBtn assessBtn"
+    "bookNote assessNote";
+  gap: 8px 24px;
+  margin-bottom: var(--space-md);
+}
+
+.ctaBook {
+  grid-area: bookBtn;
+}
+
+.ctaAssessment {
+  grid-area: assessBtn;
+}
+
+.ctaBookNote {
+  grid-area: bookNote;
+  font-size: 0.875rem;
+  color: #555;
+  margin: 0;
+}
+
+.ctaAssessmentNote {
+  grid-area: assessNote;
+  font-size: 0.875rem;
+  color: #555;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .ctaWrap {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "bookBtn"
+      "bookNote"
+      "assessBtn"
+      "assessNote";
+    gap: 8px;
+  }
+
+  .bookingBtn,
+  .assessmentBtn {
+    width: 100% !important;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
 .ctaItem {
   display: flex;
   flex-direction: column;
