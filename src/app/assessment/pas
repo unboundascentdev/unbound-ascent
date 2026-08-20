@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { BOOKING_URL } from "@/data/content";
@@ -58,7 +58,7 @@ function getResult(score) {
       color: "#EF4444",
       description: "Your business relies heavily on your time, attention, and decision-making. Growth is likely creating more pressure instead of more freedom.",
       insight: "The most common pattern at this stage is decision flow — most decisions are still traveling to you because no one else has been given clear authority to resolve them.",
-      cta: "Let's identify exactly where the dependency lives and what one change would create the most immediate relief.",
+      cta: "Let's identify exactly where the dependen lives and what one change would create the most immediate relief.",
     };
   }
   if (score <= 70) {
@@ -83,16 +83,6 @@ export default function Assessment() {
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [emailGatePassed, setEmailGatePassed] = useState(false);
-  const [showResultsBtn, setShowResultsBtn] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(false);
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://link.unboundascent.com/js/form_embed.js";
-    script.type = "text/javascript";
-    document.body.appendChild(script);
-    return () => { document.body.removeChild(script); };
-  }, []);
 
   const score = Object.values(answers).reduce((sum, val) => sum + val, 0);
   const answered = Object.keys(answers).length;
@@ -107,8 +97,6 @@ export default function Assessment() {
     setSubmitted(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
-
-
 
   if (submitted && !emailGatePassed) {
     return (
@@ -138,12 +126,17 @@ export default function Assessment() {
               />
             </div>
             <p className={styles.gateNote}>No spam. One email with your results and what to do next.</p>
-            <button type="button" className={styles.showResults} onClick={() => setEmailGatePassed(true)}>
+            <button type="button" className={styles.ctaBtn} onClick={() => setEmailGatePassed(true)}>
               Show My Results
+            </button>
+            <br />
+            <button type="button" className={styles.gateSkip} onClick={() => setEmailGatePassed(true)}>
+              Skip — show my results without submitting
             </button>
           </div>
         </div>
         <Footer />
+        <script src="https://link.unboundascent.com/js/form_embed.js" type="text/javascript" />
       </>
     );
   }
@@ -156,7 +149,7 @@ export default function Assessment() {
           <div className={styles.result}>
             <p className={styles.scoreLabel}>Your Score</p>
             <p className={styles.scoreNumber} style={{ color: result.color }}>{score} / 100</p>
-            <h2 className={styles.tier} style={{ color: result.color }}>{result.tier}</h2>
+            <h2 assName={styles.tier} style={{ color: result.color }}>{result.tier}</h2>
             <p className={styles.description}>{result.description}</p>
             <div className={styles.insightBox}>
               <p className={styles.insightLabel}>What this usually means</p>
