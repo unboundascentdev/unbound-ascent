@@ -8,41 +8,55 @@ import { BOOKING_URL } from "@/data/content";
 import styles from "./assessment.module.css";
 
 const questions = [
-  { q: "How often does your business require your attention outside normal work hours?", opts: ["Almost never", "Once or twice a week", "A few times per week", "Almost every day", "Multiple times every day"] },
-  { q: "If you took a completely unplugged 7-day vacation tomorrow, what would happen?", opts: ["The business would operate normally", "A few things would need my attention afterward", "Some important things would likely stall", "Major issues would arise", "Everything would come to a halt"] },
-  { q: "How often do team members come to you for decisions they could probably make themselves?", opts: ["Rarely", "Occasionally", "Weekly", "Daily", "Constantly"] },
-  { q: "At the end of a typical week, how often do you feel you spent your time on the wrong things?", opts: ["Almost never", "Occasionally", "About half the time", "Frequently", "Almost always"] },
-  { q: "How would you describe your current workload?", opts: ["Very manageable", "Busy but manageable", "Frequently overwhelming", "Constantly overwhelming", "I'm barely keeping up"] },
-  { q: "How often are you putting out unexpected fires?", opts: ["Rarely", "A few times per month", "Weekly", "Several times per week", "Daily"] },
-  { q: "How easy would it be to hand off 25% of your responsibilities?", opts: ["Very easy", "Somewhat easy", "Possible but difficult", "Very difficult", "Nearly impossible"] },
-  { q: "How much of your business exists only in your head?", opts: ["Almost none", "A small amount", "Some important parts", "Most important parts", "Nearly everything"] },
-  { q: "When did you last have uninterrupted time to think strategically about the business?", opts: ["This week", "Within the last month", "Within the last 3 months", "More than 3 months ago", "I honestly can't remember"] },
-  { q: "Which statement best describes how you currently feel about your business?", opts: ["I feel in control", "I feel busy but optimistic", "I feel stretched thin", "I feel trapped by the business", "Things would fall apart without my constant involvement"] },
+  { category: "continuity", q: "How often does your business require your attention outside normal work hours?", opts: ["Almost never", "Once or twice a week", "A few times per week", "Almost every day", "Multiple times every day"] },
+  { category: "continuity", q: "If you took a completely unplugged 7-day vacation tomorrow, what would happen?", opts: ["The business would operate normally", "A few things would need my attention afterward", "Some important things would likely stall", "Major issues would arise", "Everything would come to a halt"] },
+  { category: "ownership", q: "How often do team members come to you for decisions they could probably make themselves?", opts: ["Rarely", "Occasionally", "Weekly", "Daily", "Constantly"] },
+  { category: "capacity", q: "At the end of a typical week, how often do you feel you spent your time on the wrong things?", opts: ["Almost never", "Occasionally", "About half the time", "Frequently", "Almost always"] },
+  { category: "capacity", q: "How would you describe your current workload?", opts: ["Very manageable", "Busy but manageable", "Frequently overwhelming", "Constantly overwhelming", "I'm barely keeping up"] },
+  { category: "systems", q: "How often are you putting out unexpected fires?", opts: ["Rarely", "A few times per month", "Weekly", "Several times per week", "Daily"] },
+  { category: "ownership", q: "How easy would it be to hand off 25% of your responsibilities?", opts: ["Very easy", "Somewhat easy", "Possible but difficult", "Very difficult", "Nearly impossible"] },
+  { category: "systems", q: "How much of your business exists only in your head?", opts: ["Almost none", "A small amount", "Some important parts", "Most important parts", "Nearly everything"] },
+  { category: "capacity", q: "When did you last have uninterrupted time to think strategically about the business?", opts: ["This week", "Within the last month", "Within the last 3 months", "More than 3 months ago", "I honestly can't remember"] },
+  { category: "continuity", q: "Which statement best describes how you currently feel about your business?", opts: ["I feel in control", "I feel busy but optimistic", "I feel stretched thin", "I feel trapped by the business", "Things would fall apart without my constant involvement"] },
 ];
 
 const points = [10, 8, 6, 3, 0];
+
+const dependencyAreas = {
+  continuity: { name: "Business continuity", meaning: "Time away still carries risk because important work or exceptions are likely to pull you back in.", action: "List the three situations most likely to interrupt your next day off. Give each one a named owner and a clear escalation rule." },
+  ownership: { name: "Decision ownership", meaning: "Your team can execute, but too many decisions still depend on your judgment or approval.", action: "Track every decision brought to you for five working days. Transfer the most repeated decision with a boundary the team can use without asking." },
+  systems: { name: "Operational systems", meaning: "Critical knowledge and problem-solving may still live in your head instead of in a repeatable operating system.", action: "Document the next recurring problem you solve as a short checklist, then have someone else use it while you observe." },
+  capacity: { name: "Founder capacity", meaning: "Urgent work is consuming the time and attention you need for leadership, strategy, and growth.", action: "Protect one 90-minute strategy block this week and remove or reassign the task most likely to take it away." },
+};
+
+function getDependencySignals(answers) {
+  const totals = {};
+  questions.forEach((question, index) => {
+    const value = answers[index];
+    if (typeof value !== "number") return;
+    const current = totals[question.category] || { points: 0, count: 0 };
+    totals[question.category] = { points: current.points + value, count: current.count + 1 };
+  });
+  return Object.entries(totals)
+    .map(([key, value]) => ({ key, score: Math.round((value.points / (value.count * 10)) * 100), ...dependencyAreas[key] }))
+    .sort((a, b) => a.score - b.score);
+}
 
 function getResult(score) {
   if (score <= 40) return {
     tier: "Founder Dependency is High",
     color: "#EF4444",
     description: "Your business relies heavily on your time, attention, and decision-making. Growth is likely creating more pressure instead of more freedom.",
-    insight: "Most decisions are still traveling to you because the authority to resolve them has not moved far enough into the business.",
-    cta: "Let's identify exactly where that dependency lives and what one change would create the most immediate relief.",
   };
   if (score <= 70) return {
     tier: "Founder Dependency is Moderate",
     color: "#F59E0B",
-    description: "You've built some leverage, but key areas of the business still depend too heavily on you.",
-    insight: "The dependency is usually concentrated in one or two areas. Finding those pressure points is the fastest route to being able to step away.",
-    cta: "Let's pinpoint which areas are creating the most drag and what moves when you address them.",
+    description: "Normal operations have some leverage, but important decisions, exceptions, or problems can still pull you back in.",
   };
   return {
     tier: "Founder Dependency is Low",
     color: "#10B981",
     description: "You've created systems, delegation, and structure that reduce the business's dependency on you.",
-    insight: "The next challenge is role evolution—making sure your involvement changes as the business grows.",
-    cta: "Let's make sure your role is evolving with the business so you're focused where it actually matters.",
   };
 }
 
@@ -62,6 +76,9 @@ export default function Assessment() {
   const score = savedScore ?? answerScore;
   const scoreRef = useRef(score);
   const result = getResult(score);
+  const dependencySignals = getDependencySignals(answers);
+  const primarySignal = dependencySignals[0];
+  const secondarySignal = dependencySignals[1];
   const isLocalPreview = process.env.NODE_ENV === "development";
 
   useEffect(() => {
@@ -78,8 +95,12 @@ export default function Assessment() {
     }
 
     const storedScore = Number(window.sessionStorage.getItem("assessmentScore"));
+    const storedAnswers = window.sessionStorage.getItem("assessmentAnswers");
     if (Number.isFinite(storedScore)) {
       window.setTimeout(() => {
+        if (storedAnswers) {
+          try { setAnswers(JSON.parse(storedAnswers)); } catch { /* Keep the score when answer detail is unavailable. */ }
+        }
         setSavedScore(storedScore);
         setStage("results");
       }, 0);
@@ -122,6 +143,7 @@ export default function Assessment() {
     if (Object.keys(answers).length !== questions.length) return;
     track("assessment_completed", { score });
     window.sessionStorage.setItem("assessmentScore", String(score));
+    window.sessionStorage.setItem("assessmentAnswers", JSON.stringify(answers));
     setStage("email");
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -132,6 +154,7 @@ export default function Assessment() {
     setCurrentQuestion(0);
     setStage("questions");
     window.sessionStorage.removeItem("assessmentScore");
+    window.sessionStorage.removeItem("assessmentAnswers");
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -176,17 +199,32 @@ export default function Assessment() {
       <Navbar />
       <main className={styles.wrapper}>
         <section className={styles.result} aria-labelledby="result-tier">
-          <p className={styles.scoreLabel}>Your Founder Dependency Score</p>
+          <p className={styles.scoreLabel}>Your Business Independence Score</p>
           <p className={styles.scoreNumber} style={{ color: result.color }}>{score}<span> / 100</span></p>
+          <p className={styles.scoreDirection}>Higher score = less founder dependency</p>
           <h1 id="result-tier" className={styles.tier} style={{ color: result.color }}>{result.tier}</h1>
           <p className={styles.description}>{result.description}</p>
-          <div className={styles.insightBox}>
-            <p className={styles.insightLabel}>What this usually means</p>
-            <p className={styles.insightText}>{result.insight}</p>
+          <div className={styles.scoreScale} aria-label="Score range: high dependency from 0 to 40, moderate dependency from 41 to 70, and low dependency from 71 to 100">
+            <span className={score <= 40 ? styles.activeRange : ""}>0–40 High</span>
+            <span className={score > 40 && score <= 70 ? styles.activeRange : ""}>41–70 Moderate</span>
+            <span className={score > 70 ? styles.activeRange : ""}>71–100 Low</span>
           </div>
-          <p className={styles.ctaText}>{result.cta}</p>
-          <a href={BOOKING_URL} className={styles.ctaBtn} onClick={() => track("assessment_booking_clicked", { score, tier: result.tier })}>Book Your Founder Load Audit →</a>
-          <p className={styles.ctaNote}>30 minutes. No pitch. Just clarity on what to fix first.</p>
+          {primarySignal ? <div className={styles.diagnosis}>
+            <p className={styles.insightLabel}>Your strongest dependency signal</p>
+            <h2>{primarySignal.name}</h2>
+            <p>{primarySignal.meaning}</p>
+            {secondarySignal ? <p className={styles.secondarySignal}><strong>Also worth watching:</strong> {secondarySignal.name}</p> : null}
+          </div> : null}
+          {primarySignal ? <div className={styles.actionBox}>
+            <p className={styles.insightLabel}>One step to take this week</p>
+            <p>{primarySignal.action}</p>
+          </div> : null}
+          <div className={styles.auditBridge}>
+            <h2>Turn your result into a practical plan</h2>
+            <p>In your Founder Load Audit, we’ll pinpoint the pressure point creating the most dependency and identify what to transfer first.</p>
+          </div>
+          <a href={BOOKING_URL} className={styles.ctaBtn} onClick={() => track("assessment_booking_clicked", { score, tier: result.tier, primarySignal: primarySignal?.key || "unavailable" })}>Show Me What to Fix First →</a>
+          <p className={styles.ctaNote}>30 minutes. No pitch. Leave with clarity on your first priority.</p>
           <button type="button" className={styles.retake} onClick={resetAssessment}>Retake the assessment</button>
         </section>
       </main>
