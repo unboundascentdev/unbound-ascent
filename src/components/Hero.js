@@ -13,19 +13,19 @@ export default function Hero() {
           <p className={styles.body}>{hero.bodyP1}</p>
           <p className={styles.body}>{hero.bodyP2}</p>
           <div className={styles.ctaWrap}>
+            <a href="/assessment" className={`${styles.bookingBtn} ${styles.ctaAssessment}`}>
+              {hero.assessmentCta} →
+            </a>
             <a
               href={BOOKING_URL}
-              className={`${styles.bookingBtn} ${styles.ctaBook}`}
+              className={`${styles.assessmentBtn} ${styles.ctaBook}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {hero.cta} &rarr;
+              {hero.cta} →
             </a>
-            <a href="/assessment" className={`${styles.assessmentBtn} ${styles.ctaAssessment}`}>
-              {hero.assessmentCta} →
-            </a>
-            <p className={styles.ctaBookNote}>{hero.ctaNote}</p>
-            <p className={styles.ctaAssessmentNote}>{hero.assessmentLink}</p>
+            <p className={styles.ctaAssessmentNote}>{hero.ctaNote}</p>
+            <p className={styles.ctaBookNote}>{hero.assessmentLink}</p>
           </div>
         </div>
         <div className={styles.imageWrap}>

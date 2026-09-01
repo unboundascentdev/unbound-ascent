@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { nav, BOOKING_URL } from "@/data/content";
+import Link from "next/link";
+import { nav } from "@/data/content";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -9,21 +10,21 @@ export default function Navbar() {
   return (
     <nav className={styles.nav}>
       <div className={`container ${styles.inner}`}>
-        <a href="/" className={styles.brand}>{nav.brand}</a>
+        <Link href="/" className={styles.brand}>{nav.brand}</Link>
 
         <div
           id="mobile-nav-menu"
           className={`${styles.links} ${open ? styles.open : ""}`}
         >
           {nav.links.map((l) => (
-            <a key={l.label} href={l.href} className={styles.link}>
+            <Link key={l.label} href={l.href} className={styles.link}>
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a href={BOOKING_URL} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          <Link href={nav.cta.href} className="btn btn-primary">
             {nav.cta.label}
             <span className="btn-arrow">→</span>
-          </a>
+          </Link>
         </div>
 
         <button

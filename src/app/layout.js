@@ -31,6 +31,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const isProduction = process.env.NODE_ENV === "production";
+
   return (
     <html lang="en">
       <body>
@@ -41,10 +43,9 @@ export default function RootLayout({ children }) {
             window.__VERCEL_ANALYTICS_ENABLED__ = true;
           }
         `}</Script>
-        <Analytics />
+        {isProduction && <Analytics />}
       </body>
     </html>
   );
 }
-
 

@@ -6,10 +6,10 @@ export const nav = {
   brand: "UNBOUND ASCENT",
   links: [
     { label: "Home", href: "/" },
-    { label: "Assessment", href: "/assessment" },
     { label: "Blog", href: "/blog" },
+    { label: "Book a Call", href: BOOKING_URL },
   ],
-  cta: { label: "Book a Free Clarity Call", href: BOOKING_URL },
+  cta: { label: "Take the Free Assessment", href: "/assessment" },
 };
 
 // Section 1 — Opener
@@ -18,10 +18,10 @@ export const hero = {
   subline: "Your role never changed.",
   bodyP1: "If every decision, client issue, and follow-up still finds its way back to you, growth didn't buy you freedom. It bought you more to carry.",
   bodyP2: "This isn't a discipline problem, and it isn't really an operations problem either. You're still running the business the way you had to when you were the one doing everything. That's the part that hasn't caught up.",
-  ctaNote: "30 minutes. No pitch. You'll leave knowing the 1-3 things still tethering you to the business.",
+  ctaNote: "10 questions. About 2 minutes. Get a clear founder-dependency score.",
   cta: "Book Your Founder Load Audit",
-  assessmentCta: "Take the Free Assessment",
-  assessmentLink: "10 questions. 2 minutes. See exactly where you stand.",
+  assessmentCta: "See Why You Can't Switch Off",
+  assessmentLink: "Prefer to talk it through? Book a free 30-minute clarity call.",
   
 };
 

@@ -256,15 +256,13 @@
   box-shadow: 6px 6px 0px 0px var(--color-foreground);
 }
 
-/* --- Hero CTA layout ---
-   Desktop: two columns, each note sits beneath its own button.
-   Mobile: single column, stacked in source order (book, then assessment). */
+/* Primary assessment path first, with booking as a lower-emphasis alternative. */
 .ctaWrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    "bookBtn assessBtn"
-    "bookNote assessNote";
+    "assessBtn bookBtn"
+    "assessNote bookNote";
   gap: 8px 24px;
   margin-bottom: var(--space-md);
 }
@@ -295,10 +293,10 @@
   .ctaWrap {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "bookBtn"
-      "bookNote"
       "assessBtn"
-      "assessNote";
+      "assessNote"
+      "bookBtn"
+      "bookNote";
     gap: 8px;
   }
 
