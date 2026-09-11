@@ -1,4 +1,4 @@
-import { hero, BOOKING_URL } from "@/data/content";
+import { hero } from "@/data/content";
 import styles from "./Hero.module.css";
 export default function Hero() {
   return (
@@ -16,16 +16,7 @@ export default function Hero() {
             <a href="/assessment" className={`${styles.bookingBtn} ${styles.ctaAssessment}`}>
               {hero.assessmentCta} →
             </a>
-            <a
-              href={BOOKING_URL}
-              className={`${styles.assessmentBtn} ${styles.ctaBook}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {hero.cta} →
-            </a>
             <p className={styles.ctaAssessmentNote}>{hero.ctaNote}</p>
-            <p className={styles.ctaBookNote}>{hero.assessmentLink}</p>
           </div>
         </div>
         <div className={styles.imageWrap}>

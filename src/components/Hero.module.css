@@ -259,27 +259,16 @@
 /* Primary assessment path first, with booking as a lower-emphasis alternative. */
 .ctaWrap {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 360px);
   grid-template-areas:
-    "assessBtn bookBtn"
-    "assessNote bookNote";
-  gap: 8px 24px;
+    "assessBtn"
+    "assessNote";
+  gap: 8px;
   margin-bottom: var(--space-md);
-}
-
-.ctaBook {
-  grid-area: bookBtn;
 }
 
 .ctaAssessment {
   grid-area: assessBtn;
-}
-
-.ctaBookNote {
-  grid-area: bookNote;
-  font-size: 0.875rem;
-  color: #555;
-  margin: 0;
 }
 
 .ctaAssessmentNote {
@@ -294,9 +283,7 @@
     grid-template-columns: 1fr;
     grid-template-areas:
       "assessBtn"
-      "assessNote"
-      "bookBtn"
-      "bookNote";
+      "assessNote";
     gap: 8px;
   }
 
