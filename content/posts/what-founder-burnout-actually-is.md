@@ -98,4 +98,6 @@ And a role problem doesn't get solved by resting more. It gets solved by redesig
 
 That's the work most founders haven't done yet. Not because they don't want to. Because nobody named it clearly enough for them to know it was possible.
 
-If this resonates and you want to understand what your business is actually asking of you, [book a diagnostic conversation](https://www.unboundascent.com/book).
+If this resonates and you want to understand what your business is actually asking of you, the next step is a diagnostic conversation.
+
+[Book a diagnostic conversation](https://www.unboundascent.com/book)
