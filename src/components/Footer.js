@@ -82,6 +82,10 @@ export default function Footer() {
 
       <div className={`container ${styles.bottom}`}>
         <p className={styles.copy}>© {new Date().getFullYear()} Unbound Ascent. All rights reserved.</p>
+        <nav className={styles.legal} aria-label="Legal">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Use</a>
+        </nav>
       </div>
     </footer>
   );

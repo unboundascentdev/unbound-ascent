@@ -272,14 +272,25 @@ export function parseTrackingContext(search = "", referrer = "", siteOrigin = ""
 }
 
 export function buildResultParameters(result, tracking, completion) {
+  const completionDate = completion.latest.slice(0, 10);
+  const firstCompletionDate = completion.first.slice(0, 10);
+  const primaryProfileSummary = result.isAlignedOperator
+    ? result.resultContent.meaning
+    : result.primaryCategories
+        .map((category) => `${category.profile}: ${category.meaning}`)
+        .join("\n\n");
+
   return {
     assessment_score: String(result.score),
     assessment_status: result.status.status,
     primary_profile: result.primaryProfileLabel,
     secondary_profile: result.secondaryProfileLabel,
-    assessment_completed_at: completion.latest,
-    assessment_first_completed_at: completion.first,
-    assessment_latest_completed_at: completion.latest,
+    primary_profile_summary: primaryProfileSummary,
+    primary_action: result.resultContent.action,
+    assessment_completed_at: completionDate,
+    assessment_first_completed_at: firstCompletionDate,
+    assessment_latest_completed_at: completionDate,
+    assessment_source: tracking.source,
     source: tracking.source,
     utm_source: tracking.utm_source,
     utm_medium: tracking.utm_medium,

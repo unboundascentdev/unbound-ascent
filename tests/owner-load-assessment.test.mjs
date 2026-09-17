@@ -128,7 +128,11 @@ test("hidden result fields and booking parameters preserve required values", () 
   assert.equal(values.assessment_score, "54");
   assert.equal(values.assessment_status, "Moderate owner dependence");
   assert.equal(values.primary_profile, "The Misaligned Achiever");
-  assert.equal(values.assessment_completed_at, "2026-09-17T12:00:00.000Z");
+  assert.equal(values.assessment_completed_at, "2026-09-17");
+  assert.equal(values.assessment_first_completed_at, "2026-09-17");
+  assert.equal(values.assessment_source, "linkedin");
+  assert.match(values.primary_profile_summary, /business may be stable or growing/i);
+  assert.match(values.primary_action, /Write three conditions/i);
   const url = new URL(appendParameters("/book#calendar", values), "https://www.unboundascent.com");
   assert.equal(url.pathname, "/book");
   assert.equal(url.hash, "#calendar");
