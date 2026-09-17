@@ -7,7 +7,7 @@ export const nav = {
   links: [
     { label: "Home", href: "/" },
     { label: "Blog", href: "/blog" },
-    { label: "Book a Call", href: BOOKING_URL },
+    { label: "Owner Load Review", href: BOOKING_URL },
   ],
   cta: { label: "Take the Free Assessment", href: "/assessment" },
 };
@@ -18,10 +18,10 @@ export const hero = {
   subline: "Your role never changed.",
   bodyP1: "If every decision, client issue, and follow-up still finds its way back to you, growth didn't buy you freedom. It bought you more to carry.",
   bodyP2: "This isn't a discipline problem, and it isn't really an operations problem either. You're still running the business the way you had to when you were the one doing everything. That's the part that hasn't caught up.",
-  ctaNote: "10 questions. About 2 minutes. Get a clear founder-dependency score.",
-  cta: "Book Your Founder Load Audit",
+  ctaNote: "10 questions. About 2 minutes. Get your Business Independence Score.",
+  cta: "Book Your Owner Load Review",
   assessmentCta: "See Why You Can't Switch Off",
-  assessmentLink: "Prefer to talk it through? Book a free 30-minute clarity call.",
+  assessmentLink: "Prefer to talk it through? Book a 30-minute Owner Load Review.",
   
 };
 
@@ -101,7 +101,7 @@ export const about = {
   title: "About Chris",
   body: "I work with service-based business owners who are building real things and want to stop paying for it with everything else that matters.",
   background: "I've spent years inside growing businesses — not just advising them. I watched capable founders build real revenue, hire real teams, and still end up as the thing everything routes through. Every decision, every escalation, every moment something felt uncertain — it came back to them. That pattern has a structural cause. And that's what I work on.",
-  cta: "Book Your Founder Load Audit",
+  cta: "Book Your Owner Load Review",
 };
 
 // Footer

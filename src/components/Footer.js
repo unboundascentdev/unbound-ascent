@@ -63,7 +63,7 @@ export default function Footer() {
             <a key={l.label} href={l.href} className={styles.link}>{l.label}</a>
           ))}
           <a href={BOOKING_URL} className={styles.link} target="_blank" rel="noopener noreferrer">
-            Book A Free Session
+            Book an Owner Load Review
           </a>
         </div>
 
