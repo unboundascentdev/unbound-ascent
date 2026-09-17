@@ -16,7 +16,6 @@ export default function TermsPage() {
           <p className={styles.eyebrow}>Unbound Ascent LLC</p>
           <h1 className={styles.title}>Terms of Use</h1>
           <p className={styles.updated}>Effective September 17, 2026</p>
-          <p className={styles.notice}>These terms are a practical starting point for the current website and should be reviewed by qualified legal counsel before relying on them for a paid program or expanded service offering.</p>
         </header>
 
         <div className={styles.content}>

@@ -16,7 +16,6 @@ export default function PrivacyPolicyPage() {
           <p className={styles.eyebrow}>Unbound Ascent LLC</p>
           <h1 className={styles.title}>Privacy Policy</h1>
           <p className={styles.updated}>Effective September 17, 2026</p>
-          <p className={styles.notice}>This policy explains our current website and communication practices. It should be reviewed by qualified legal counsel as the business, services, or applicable laws change.</p>
         </header>
 
         <div className={styles.content}>
