@@ -9,10 +9,10 @@ export default function Cta() {
           <div className={styles.cardBg} />
           <div className={styles.inner}>
             <h2 className={styles.title}>
-              What would change if you weren't carrying all of this alone?
+              What would change if you weren’t carrying all of this alone?
             </h2>
             <p className={styles.sub}>
-              One conversation won't fix everything. But it will give you clarity
+              One conversation won’t fix everything. But it will give you clarity
               on exactly what to change first.
             </p>
             <a
@@ -21,7 +21,7 @@ export default function Cta() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Book Your Founder Load Audit
+              Book Your Owner Load Review
               <span className={styles.arrow}>→</span>
             </a>
           </div>

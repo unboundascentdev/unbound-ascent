@@ -1,11 +1,11 @@
 export const metadata = {
-  title: "Founder Dependency Assessment | Unbound Ascent",
+  title: "Owner Load Assessment for Business Owners | Unbound Ascent",
   description:
-    "Take this free 10-question assessment to find out how structurally dependent your business is on you — and what to fix first.",
+    "Take the free two minute Owner Load Assessment to see where your business still depends on your time, judgment, or attention and what to change first.",
   openGraph: {
-    title: "Founder Dependency Assessment | Unbound Ascent",
+    title: "Owner Load Assessment for Business Owners | Unbound Ascent",
     description:
-      "10 questions. Find out how structurally dependent your business is on you.",
+      "See where your business still depends on your time, judgment, or attention and what to change first.",
     url: "https://www.unboundascent.com/assessment",
     siteName: "Unbound Ascent",
     type: "website",
